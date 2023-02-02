@@ -7,19 +7,20 @@ vegan = False
 glutenfree = False
 
 #receives input from user
-ask_vegetarian = input("Is anyone in your group vegetarian? ")
-ask_vegan = input("Is anyone in your group vegan? ")
-ask_glutenfree = input("Is anyone in your group gluten free? ")
-
+ask_vegetarian = input("Is anyone in your party a vegetarian? ")
 if ask_vegetarian == "yes":
     vegetarian = True
+    
+ask_vegan = input("Is anyone in your party a vegan? ")
 if ask_vegan == "yes":
     vegan = True
+    
+ask_glutenfree = input("Is anyone in your party gluten free? ")
 if ask_glutenfree == "yes":
     glutenfree = True
 
 #prints out available restaurants
-print("\nHere are the resturants that fit the needs of your group: ")
+print("\nHere are your restaurant choices: ")
 
 if vegetarian == False and vegan == False and glutenfree == False:
     print("Joe's Gourmet Burgers")
