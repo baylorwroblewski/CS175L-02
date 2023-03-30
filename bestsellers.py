@@ -1,3 +1,6 @@
+#Bestsellers
+#Baylor, Shabbar, Ty
+#CS 175 L
 def create_booklist(filename):
     with open(filename, 'r') as book_list:
         booklist = []
