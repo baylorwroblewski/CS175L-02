@@ -46,9 +46,9 @@ def search_specificDate(books, month, year):
     found = False
     for book in books:
         date = book[3].split('/')
-        month, day, year = date
-        month_g = date[0]
-        year_g = date[2]
+        month1, day1, year1 = date
+        month_g = month1
+        year_g = year1
         month_g = int(month_g)
         year_g = int(year_g)
         if month == month_g and year == year_g:
