@@ -20,7 +20,7 @@ def search_author(books, author):
         if author.lower() in book[1].lower():
             print_books(book)
         else:
-            None
+            print("No books with this author.")
     menu()
     
 def search_title(books, title):
@@ -28,7 +28,7 @@ def search_title(books, title):
         if title.lower() in book[0].lower():
             print_books(book)
         else:
-            None
+            print("No books with this title.")
     menu()
 def search_yearRange(books, year1, year2):
     found = False
@@ -46,8 +46,9 @@ def search_specificDate(books, month, year):
         date = book[3].split('/')
         month_g = date[0:2]
         year_g = date[-4:]
+        month_g = int(month_g)
+        year_g = int(year_g)
         if int(month_g) == int(month) and int(year_g) == int(year):
-            found = True
             print_books(book)
     menu()
 def menu():
