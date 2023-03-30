@@ -19,16 +19,13 @@ def search_author(books, author):
     for book in books:
         if author.lower() in book[1].lower():
             print_books(book)
-        else:
-            print("No books with this author.")
     menu()
     
 def search_title(books, title):
     for book in books:
         if title.lower() in book[0].lower():
             print_books(book)
-        else:
-            print("No books with this title.")
+
     menu()
 def search_yearRange(books, year1, year2):
     found = False
