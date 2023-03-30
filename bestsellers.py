@@ -72,12 +72,12 @@ def menu():
     print("\tQ. Quit")
     option = input("\tOption: ")
     if option == "1":
-        year1 = int(input("Year 1: "))
-        year2 = int(input("Year 2: "))
+        year1 = int(input("Enter Year 1: "))
+        year2 = int(input("Enter Year 2: "))
         search_yearRange (books, year1, year2)
     if option =="2":
-        month = int(input("Month: "))
-        year = int(input("Year: "))
+        month = int(input("Enter Month (1-12): "))
+        year = int(input("Enter Year: "))
         search_specificDate (books, month, year)
     if option == "3":
         author = input("Author: ")
