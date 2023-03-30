@@ -41,14 +41,18 @@ def search_yearRange(books, year1, year2):
             print_books(book)
     if not found:
             print("No books found for this search.")
+            
 def search_specificDate(books, month, year):
+    found = False
     for book in books:
         date = book[3].split('/')
-        month_g = date[0:2]
-        year_g = date[-4:]
+        month, day, year = date
+        month_g = date[0]
+        year_g = date[2]
         month_g = int(month_g)
         year_g = int(year_g)
-        if int(month_g) == int(month) and int(year_g) == int(year):
+        if month == month_g and year == year_g:
+            found = True
             print_books(book)
     menu()
 def menu():
